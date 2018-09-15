@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FCC Technical Documentation Page</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+	<header class="navbar__header"><h2>PHP Documentation</h2></header>
+
+	<ul>
+		<li><a class="navbar__link nav-link" href="#Introduction">Introduction</a></li>
+		<li><a class="navbar__link nav-link" href="#What_you_should_already_know">What you should already know</a></li>
+		<li><a class="navbar__link nav-link" href="#PHP_Install">PHP Install</a></li>
+		<li><a class="navbar__link nav-link" href="#PHP_Syntax">PHP Syntax</a></li>
+		<li><a class="navbar__link nav-link" href="#PHP_Variables">PHP Variables</a></li>
+		<li><a class="navbar__link nav-link" href="#PHP_Echo_Print">PHP Echo Print</a></li>
+		
+		<li><a class="navbar__link nav-link" href="#PHP_Data_Types">PHP Data Types</a></li>
+		<li><a class="navbar__link nav-link" href="#PHP_Strings">PHP Strings</a></li>
+		<li><a class="navbar__link nav-link" href="#PHP_Constants">PHP Constants</a></li>
+		<li><a class="navbar__link nav-link" href="#PHP_Operators">PHP Operators</a></li>
+		<li><a class="navbar__link nav-link" href="#PHP_If_Else_Elseif">PHP If Else Elseif</a></li>
+		<li><a class="navbar__link nav-link" href="#PHP_Switch">PHP Switch</a></li>
+		<li><a class="navbar__link nav-link" href="#PHP_While_Loops">PHP While Loops</a></li>
+		<li><a class="navbar__link nav-link" href="#PHP_For_Loops">PHP For Loops</a></li>
+		<li><a class="navbar__link nav-link" href="#PHP_Functions">PHP Functions</a></li>
+		<li><a class="navbar__link nav-link" href="#PHP_Arrays">PHP Arrays</a></li>
+		<li><a class="navbar__link nav-link" href="#PHP_Sorting_Arrays">PHP Sorting Arrays</a></li>
+		<li><a class="navbar__link nav-link" href="#PHP_Super_Globals">PHP Super Globals</a></li>
+		<li><a class="navbar__link nav-link" href="#Reference">Reference</a></li>
+	</ul>
+</nav>
+
+
+
+
+
+<main class="main-doc" id="main-doc">
+	<section class="main-section" id="Introduction">
+		<header>Introduction</header>
+
+		<article>
+			<p>PHP: Hypertext Preprocessor (or simply PHP) is a server-side scripting language designed for Web development, but also used as a general-purpose programming language. It was originally created by Rasmus Lerdorf in 1994, the PHP reference implementation is now produced by The PHP Group. PHP originally stood for Personal Home Page, but it now stands for the recursive acronym PHP: Hypertext Preprocessor.</p>
+
+			<p>PHP code may be embedded into HTML code, or it can be used in combination with various web template systems, web content management systems, and web frameworks. PHP code is usually processed by a PHP interpreter implemented as a module in the web server or as a Common Gateway Interface (CGI) executable. The web server combines the results of the interpreted and executed PHP code, which may be any type of data, including images, with the generated web page. PHP code may also be executed with a command-line interface (CLI) and can be used to implement standalone graphical applications.</p>
+
+			<p>The standard PHP interpreter, powered by the Zend Engine, is free software released under the PHP License. PHP has been widely ported and can be deployed on most web servers on almost every operating system and platform, free of charge.</p>
+
+			<p>The PHP language evolved without a written formal specification or standard until 2014, with the original implementation acting as the de facto standard which other implementations aimed to follow. Since 2014 work has gone on to create a formal PHP specification.</p>
+
+			<p>During the 2010s there have been increased efforts towards standardisation and code sharing in PHP applications by projects such as PHP-FIG in the form of PSR initiatives as well as the Composer dependency manager and associated Packagist repository. PHP hosts a diverse array of web frameworks requiring framework-specific knowledge, with Laravel recently emerging as a popular option by incorporating ideas made popular from other competing non-PHP web frameworks, like Ruby on Rails.</p>
+		</article>
+	</section>
+
+	<section class="main-section" id="What_you_should_already_know">
+		<header>What you should already know</header>
+
+		<article>
+			<p><i class="fas fa-circle fa-2x"></i>Advanced knowledge of Hyper Text Markup Language<i class="fab fa-html5 fa-x"></i></p>
+			<p><i class="fas fa-circle fa-2x"></i>Advanced knowledge of Cascading Style Sheet<i class="fab fa-css3-alt fa-x"></i></p>
+			<p><i class="fas fa-circle fa-2x"></i>Advanced knowledge of Javascript<i class="fab fa-js-square fa-x"></i></p>
+		</article>
+	</section>
+
+	<section class="main-section" id="PHP_Install">
+		<header>PHP Install</header>
+
+		<article>
+			<li><i class="fas fa-circle fa-2x"></i>Install a web server (i.e. <a href="https://www.apachefriends.org/download.html" target="_blank">XAMPP</a>)</li>
+			<li><i class="fas fa-circle fa-2x"></i>Install PHP</li>
+			<li><i class="fas fa-circle fa-2x"></i>Install a database, such as MySQL</li>
+		</article>
+	</section>
+
+	<section class="main-section" id="PHP_Syntax">
+		<header>PHP Syntax</header>
+
+		<article>
+			<li>A PHP script can be placed anywhere in the document.</li>
+			<li>Here is an exmple of PHP Syntax</li>
+
+			<code>
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+				&lt;body&gt;
+
+				&lt;h1&gt;My first PHP page&lt;&#47;h1&gt;
+
+				&lt;&#63;php
+				echo "Hello World!";
+				&#63;&gt;
+
+				&lt;&#47;body&gt;
+				&lt;&#47;html&gt;
+			</code>
+		</article>
+	</section>
+
+	<section class="main-section" id="PHP_Variables">
+		<header>PHP Variables</header>
+
+		<article>
+			<li>In PHP, a variable starts with the $ sign, followed by the name of the variable:</li>
+			<code>
+				&lt;&#63;php
+					&&lt;36;txt = "Hello world!";
+					&#36;x = 5;
+					&#36;y = 10.5;
+				&#63;&gt;
+			</code>
+
+			<li>After the execution of the statements above, the variable <strong>$txt</strong> will hold the value <strong>Hello world!,</strong> the variable <strong>$x</strong> will hold the value <strong>5,</strong> and the variable <strong>$y</strong> will hold the value <strong>10.5.</strong></li>
+
+			<li><strong>Note:</strong> When you assign a text value to a variable, put quotes around the value.</li>
+
+			<li><strong>Note:</strong> Unlike other programming languages, PHP has no command for declaring a variable. It is created the moment you first assign a value to it.</li>
+		</article>
+	</section>
+
+	<section class="main-section" id="PHP_Echo_Print">
+		<header>PHP Echo Print</header>
+
+		<article>
+			<p>The <strong>echo</strong> statement can be used with or without parentheses: <strong>echo</strong> or <strong>echo().</strong></p>
+
+			<p>The following example shows how to output text with the echo command (notice that the text can contain HTML markup): </p>
+
+			<code>
+				&lt;&#63;php
+				echo "&lt;h2&gt;PHP is Fun!&lt;&#47;h2&gt;";
+				echo "Hello world!&lt;br&gt;";
+				echo "I'm about to learn PHP!&lt;br&gt;";
+				echo "This ", "string ", "was ", "made ", "with multiple parameters.";
+				&#63;&gt;
+			</code>
+		</article>
+	</section>
+
+	<section class="main-section" id="PHP_Data_Types">
+		<header>PHP Data Types</header>
+
+		<article>
+			<p>Variables can store data of different types, and different data types can do different things.</p>
+			<p>PHP supports the following data types: </p>
+			<p class="special"><i class="fas fa-circle fa-2x"></i>String</p>
+			<p class="special"><i class="fas fa-circle fa-2x"></i>Integer</p>
+			<p class="special"><i class="fas fa-circle fa-2x"></i>Float (floating point numbers - also called double)</p>
+			<p class="special"><i class="fas fa-circle fa-2x"></i>Boolean</p>
+			<p class="special"><i class="fas fa-circle fa-2x"></i>Array</p>
+			<p class="special"><i class="fas fa-circle fa-2x"></i>Object</p>
+			<p class="special"><i class="fas fa-circle fa-2x"></i>NULL</p>
+			<p class="special"><i class="fas fa-circle fa-2x"></i>Resource</p>
+		</article>
+	</section>
+
+	<section class="main-section" id="PHP_Strings">
+		<header>PHP Strings</header>
+		<article>
+			<p>PHP Strings are which words/numbers placed inside the <strong>""</strong></p>
+			<p>Here's an example: </p>
+			<code>
+				&lt;&#63;php
+				echo "Hello world!";
+				&#63;&gt;
+			</code>
+
+			<p>Here, <strong>"Hello, world"</strong> is a string</p>
+		</article>
+	</section>
+
+	<section class="main-section" id="PHP_Constants">
+		<header>PHP Constants</header>
+		<article>
+			<p>A constant is an identifier (name) for a simple value. The value cannot be changed during the script.</p>
+
+			<p>A valid constant name starts with a letter or underscore (no $ sign before the constant name).</p>
+
+			<p><strong>Note:</strong> Unlike variables, constants are automatically global across the entire script.</p>
+
+			<p>To create a constant, use the <strong>define()</strong> function.</p>
+
+			<code>
+				&lt;&#63;php
+				define("GREETING", "Welcome to W3Schools.com!");
+				echo GREETING;
+				&#63;&gt;
+			</code>
+		</article>
+	</section>
+
+	<section class="main-section" id="PHP_Operators">
+		<header>PHP Operators</header>
+		
+		<article>
+			<p>Operators are used to perform operations on variables and values.</p>
+			<p>PHP divides the operators in the following groups: </p>
+			<p class="special"><i class="fas fa-circle fa-2x"></i>Arithmetic operators</p>
+			<p class="special"><i class="fas fa-circle fa-2x"></i>Assignment operators</p>
+			<p class="special"><i class="fas fa-circle fa-2x"></i>Comparison operators</p>
+			<p class="special"><i class="fas fa-circle fa-2x"></i>Increment/Decrement operators</p>
+			<p class="special"><i class="fas fa-circle fa-2x"></i>Logical operators</p>
+			<p class="special"><i class="fas fa-circle fa-2x"></i>String operators</p>
+			<p class="special"><i class="fas fa-circle fa-2x"></i>Array operators</p>
+		</article>
+	</section>
+
+	<section class="main-section" id="PHP_If_Else_Elseif">
+		<header>PHP If Else Elseif</header>
+
+		<article>
+			<p>Very often when you write code, you want to perform different actions for different conditions. You can use conditional statements in your code to do this.</p>
+
+			<p>In PHP we have the following conditional statements: </p>
+
+			<p class="special"><i class="fas fa-circle fa-2x"></i><strong>if</strong> statement - executes some code if one condition is true</p>
+			<p class="special"><i class="fas fa-circle fa-2x"></i><strong>if...else</strong>statement - executes some code if a condition is true and another code if that condition is false</p>
+			<p class="special"><i class="fas fa-circle fa-2x"></i><strong>if...elseif....else</strong> statement - executes different codes for more than two conditions</p>
+			<p class="special"><i class="fas fa-circle fa-2x"></i><strong>switch</strong> statement - selects one of many blocks of code to be executed</p>
+
+			<p>Here is an example: </p>
+
+			<code>
+				&lt;&quest;php
+				$t = date("H");
+
+				if ($t &lt; "10") {
+				    echo "Have a good morning!";
+				} elseif ($t &lt; "20") {
+				    echo "Have a good day!";
+				} else {
+				    echo "Have a good night!";
+				}
+				&quest;&gt;
+			</code>
+		</article>
+	</section>
+
+	<section class="main-section" id="PHP_Switch">
+		<header>PHP Switch</header>
+
+		<article>
+			<p>Use the <strong>switch</strong> statement to select one of many blocks of code to be executed.</p>
+			<p>This is how it works: First we have a single expression <em>n</em> (most often a variable), that is evaluated once. The value of the expression is then compared with the values for each case in the structure. If there is a match, the block of code associated with that case is executed. Use <strong>break</strong> to prevent the code from running into the next case automatically. The <strong>default</strong> statement is used if no match is found.</p>
+
+			<p>Here is an example: </p>
+
+			<code>
+				&lt;&quest;php
+				$favcolor = "red";
+
+				switch ($favcolor) {
+					case "red":
+					    echo "Your favorite color is red!";
+					    break;
+					case "blue":
+					    echo "Your favorite color is blue!";
+					    break;
+					case "green":
+					    echo "Your favorite color is green!";
+					    break;
+					default:
+					    echo "Your favorite color is neither red, blue, nor green!";
+				}
+				&quest;&gt;
+			</code>
+		</article>
+	</section>
+
+	<section class="main-section" id="PHP_While_Loops">
+		<header>PHP While Loops</header>
+
+		<article>
+			<p>PHP while loops execute a block of code while the specified condition is true.</p>
+
+			<p>Often when you write code, you want the same block of code to run over and over again in a row. Instead of adding several almost equal code-lines in a script, we can use loops to perform a task like this.</p>
+
+			<p>In PHP, we have the following looping statements: </p>
+
+			<p class="special"><i class="fas fa-circle fa-2x"></i><strong>while</strong> - loops through a block of code as long as the specified condition is true</p>
+
+			<p class="special"><i class="fas fa-circle fa-2x"></i><strong>do...while</strong> - loops through a block of code once, and then repeats the loop as long as the specified condition is true</p>
+
+			<p class="special"><i class="fas fa-circle fa-2x"></i><strong>for</strong> - loops through a block of code a specified number of times</p>
+
+			<p class="special"><i class="fas fa-circle fa-2x"></i><strong>foreach</strong> - loops through a block of code for each element in an array</p>
+
+			<p>The example below first sets a variable $x to 1 ($x = 1). Then, the while loop will continue to run as long as $x is less than, or equal to 5 ($x <= 5). $x will increase by 1 each time the loop runs ($x++): </p>
+
+			<code>
+				&lt;&quest;php 
+				$x = 1; 
+
+				while($x &lt;= 5) {
+				    echo "The number is: $x";
+				    $x++;
+				} 
+				&quest;&gt;
+			</code>
+		</article>
+	</section>
+
+	<section class="main-section" id="PHP_For_Loops">
+		<header>PHP For Loops</header>
+
+		<article>
+			<p>PHP <strong>for</strong> loops execute a block of code a specified number of times.</p>
+
+			<p>The <strong>for</strong> loop is used when you know in advance how many times the script should run.</p>
+
+			<p class="special"><i class="fas fa-circle fa-2x"></i><em>init counter:</em> Initialize the loop counter value</p>
+			<p class="special"><i class="fas fa-circle fa-2x"></i><em>test counter:</em> Evaluated for each loop iteration. If it evaluates to TRUE, the loop continues. If it evaluates to FALSE, the loop ends.</p>
+			<p class="special"><i class="fas fa-circle fa-2x"></i><em>increment counter:</em> Increases the loop counter value</p>
+
+			<p>The example below displays the numbers from 0 to 10: </p>
+
+			<code>
+				&lt;&quest;php 
+				for ($x = 0; $x &lt;= 10; $x++) {
+				    echo "The number is: $x";
+				} 
+				&quest;&gt;
+			</code>
+		</article>
+	</section>
+
+	<section class="main-section" id="PHP_Functions">
+		<header>PHP Functions</header>
+
+		<article>
+			<p>The real power of PHP comes from its functions; it has more than 1000 built-in functions.</p>
+
+			<p>Besides the built-in PHP functions, we can create our own functions.</p>
+
+			<p>A function is a block of statements that can be used repeatedly in a program.</p>
+
+			<p>A function will not execute immediately when a page loads.</p>
+
+			<p>A function will be executed by a call to the function.</p>
+
+			<p>A user-defined function declaration starts with the word <strong>function</strong></p>
+
+			<p>Function names are NOT case-sensitive.</p>
+
+			<p><strong>Note:</strong> A function name can start with a letter or underscore (not a number).</p>
+
+			<p><strong>Tip:</strong> Give the function a name that reflects what the function does!</p>
+
+			<p>In the example below, we create a function named "writeMsg()". The opening curly brace ( { ) indicates the beginning of the function code and the closing curly brace ( } ) indicates the end of the function. The function outputs "Hello world!". To call the function, just write its name: </p>
+
+			<code>
+				&lt;&quest;php
+				function writeMsg() {
+				    echo "Hello world!";
+				}
+
+				writeMsg(); // call the function
+				&quest;&gt;
+			</code>
+		</article>
+	</section>
+
+	<section class="main-section" id="PHP_Arrays">
+		<header>PHP Arrays</header>
+		<article>
+			<p>An array stores multiple values in one single variable: </p>
+			<code>
+				&lt;&quest;php
+				$cars = array("Volvo", "BMW", "Toyota");
+				echo "I like " . $cars[0] . ", " . $cars[1] . " and " . $cars[2] . ".";
+				&quest;&gt;
+			</code>
+		</article>
+	</section>
+
+	<section class="main-section" id="PHP_Sorting_Arrays">
+		<header>PHP Sorting Arrays</header>
+
+		<article>
+			<p>In this chapter, we will go through the following PHP array sort functions: </p>
+
+			<p class="special"><i class="fas fa-circle fa-2x"></i><strong>sort()</strong> - sort arrays in ascending order</p>
+			<p class="special"><i class="fas fa-circle fa-2x"></i><strong>rsort()</strong> - sort arrays in descending order</p>
+			<p class="special"><i class="fas fa-circle fa-2x"></i><strong>asort()</strong> - sort associative arrays in ascending order, according to the value</p>
+			<p class="special"><i class="fas fa-circle fa-2x"></i><strong>ksort()</strong> - sort associative arrays in ascending order, according to the key</p>
+			<p class="special"><i class="fas fa-circle fa-2x"></i><strong>arsort()</strong> - sort associative arrays in descending order, according to the value</p>
+			<p class="special"><i class="fas fa-circle fa-2x"></i><strong>krsort()</strong> - sort associative arrays in descending order, according to the key</p>
+
+			<p>The following example sorts the elements of the $cars array in ascending alphabetical order: </p>
+
+			<code>
+				&lt;&quest;php
+				$cars = array("Volvo", "BMW", "Toyota");
+				sort($cars);
+				&quest;&gt;
+			</code>
+		</article>
+	</section>
+
+	<section class="main-section" id="PHP_Super_Globals">
+		<header>PHP Super Globals</header>
+
+		<article>
+			<p>Several predefined variables in PHP are "superglobals", which means that they are always accessible, regardless of scope - and you can access them from any function, class or file without having to do anything special.</p>
+
+			<p>The PHP superglobal variables are: </p>
+
+			<p class="special"><i class="fas fa-circle fa-2x"></i>$GLOBALS</p>
+			<p class="special"><i class="fas fa-circle fa-2x"></i>$_SERVER</p>
+			<p class="special"><i class="fas fa-circle fa-2x"></i>$_REQUEST</p>
+			<p class="special"><i class="fas fa-circle fa-2x"></i>$_POST</p>
+			<p class="special"><i class="fas fa-circle fa-2x"></i>$_GET</p>
+			<p class="special"><i class="fas fa-circle fa-2x"></i>$_FILES</p>
+			<p class="special"><i class="fas fa-circle fa-2x"></i>$_ENV</p>
+			<p class="special"><i class="fas fa-circle fa-2x"></i>$_COOKIE</p>
+			<p class="special"><i class="fas fa-circle fa-2x"></i>$_SESSION</p>
+		</article>
+	</section>
+
+	<section class="main-section" id="Reference">
+		<header>Reference</header>
+
+		<article>
+			<p><i class="fas fa-circle fa-2x"></i>All the documentation in this page is taken from <a href="https://www.w3schools.com" target="_blank">W3SCHOOLS.</a></p>
+		</article>
+	</section>
+
+
+
+	
+
+
+
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <i class="fas fa-circle fa-2x"></i> -->
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
